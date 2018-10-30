@@ -1,0 +1,11 @@
+language: python
+
+python:
+  - 3.6
+  
+build:
+  ci:
+    - "pip install coveralls"
+    - "pip install -r test-requirements.txt"
+    - py.test --cov-config .coveragerc --cov-report= --cov=.
+
